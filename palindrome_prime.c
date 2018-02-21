@@ -3,8 +3,9 @@
 
 int is_prime(int num){
     int i = num - 1, flag = 1;
+    if( num == 1) return 0;
 	while(i>=sqrt(num)){
-	    if( num%i == 0 || num == 1){ flag = 0; break; }
+	    if( num%i == 0 ){ flag = 0; break; }
 	    i-=1;
 	}
 	return flag;
@@ -17,15 +18,14 @@ int is_palindrome(int num){
         num /= 10;
         s = s*10 + r;
     }
-    //printf("%d %d %d %d",orig,num,s,r);
     if(orig == s) return 1;
     else return 0;
 }
 
 int main(){
     int i;
-    //printf("%d %d", is_prime(151), is_palindrome(151));
-	for(i=10;i<=1000;i++){
+   	for(i=1;i<=1000;i++){
+//change accordingly
 		if(is_prime(i) && is_palindrome(i))	printf("%d\n", i);
 	}
     return 0;
