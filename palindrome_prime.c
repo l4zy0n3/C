@@ -3,8 +3,8 @@
 
 int is_prime(int num){
     int i = num - 1, flag = 1;
-	while(i>sqrt(num)){
-	    if( num%i == 0){ flag = 0; break; }
+	while(i>=sqrt(num)){
+	    if( num%i == 0 || num == 1){ flag = 0; break; }
 	    i-=1;
 	}
 	return flag;
