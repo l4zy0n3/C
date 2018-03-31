@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int min_array(int *arr, int len){
     int min = 0, i;
@@ -30,7 +29,7 @@ int gcd(int *arr, int len){
     
 }
 
-int main(){
+int main( int argc, char *argv[]){
     int len, arr[1000] = {-1}, i;
     puts("Enter length :");
     scanf("%d", &len);
